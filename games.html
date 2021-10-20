@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Harked Reborn</title>
+
+    <meta charset="utf-8">
+
+    <meta name="author" content="Harked Reborn" />
+    <meta name="description" content="Harked Reborn" />
+    <meta name="keywords" content="Harked, Reborn, HarkedReborn, script, lua, krnl, synapse" />
+
+    <meta property="og:title" content="Harked Reborn" />
+    <meta property="og:description" content="Official website for Harked Reborn - c00lkidd4" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        body {
+            background-color: rgb(25, 25, 25);
+            color: white;
+            font-family: "Trebuchet MS";
+        }
+
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: rgb(80, 80, 80);
+        }
+
+        #gamesLabel {
+            background-color: rgb(25, 25, 25);
+            color: rgb(255, 255, 255);
+            border: 0px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h4 id="gamesLabel">
+            </h20>
+            <br>
+            <br>
+    </center>
+
+    <script type="text/javascript">
+        const gamesBox = document.getElementById("gamesLabel");
+
+        const games = new XMLHttpRequest();
+        const gamesURL = "https://lolpippiou.github.io/HarkedReborn/Games.txt";
+        games.open("GET", gamesURL, true);
+        games.send();
+
+        games.onreadystatechange = () => {
+            gamesBox.innerText = games.responseText;
+        }
+    </script>
+</body>
+
+</html>
